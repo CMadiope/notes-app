@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/CMadiope/notes-app/static/css/main.4a653ea6.css",
+    "main.js": "/CMadiope/notes-app/static/js/main.624426f5.js",
+    "static/js/787.9243050f.chunk.js": "/CMadiope/notes-app/static/js/787.9243050f.chunk.js",
+    "index.html": "/CMadiope/notes-app/index.html",
+    "main.4a653ea6.css.map": "/CMadiope/notes-app/static/css/main.4a653ea6.css.map",
+    "main.624426f5.js.map": "/CMadiope/notes-app/static/js/main.624426f5.js.map",
+    "787.9243050f.chunk.js.map": "/CMadiope/notes-app/static/js/787.9243050f.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4a653ea6.css",
+    "static/js/main.624426f5.js"
+  ]
+}
