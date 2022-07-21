@@ -1,6 +1,6 @@
 import React from "react";
 
-const CreateNote = ({textHandler, saveHandler, inputText}) => {
+const CreateNote = ({ textHandler, saveHandler, inputText }) => {
   return (
     <div className='note' style={{ background: "rgba(255, 255, 255, 0)" }}>
       <textarea
@@ -11,9 +11,11 @@ const CreateNote = ({textHandler, saveHandler, inputText}) => {
         onChange={textHandler}
         maxLength='100'
       ></textarea>
-      <div className="note__footer">
-        <span className="label">left</span>
-        <button className="none__save" onClick={saveHandler}>Save</button>
+      <div className='note__footer'>
+        <span className='label'> left</span>
+        <button className='none__save' onClick={saveHandler}>
+          Save
+        </button>
       </div>
     </div>
   );

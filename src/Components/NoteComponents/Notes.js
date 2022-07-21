@@ -1,19 +1,17 @@
-import React,{useState} from 'react'
-import Note from './Note'
-import '../css/Note.css'
-import CreateNote from './CreateNote'
-import {v4 as uuid} from 'uuid'
-
+import React, { useState } from "react";
+import Note from "./Note";
+import "../css/Note.css";
+import CreateNote from "./CreateNote";
+import { v4 as uuid } from "uuid";
 
 const Notes = () => {
-
   const [notes, setNotes] = useState([]);
   const [inputText, setInputText] = useState("");
 
   // get text and store in state
-  const textHandler = e => {
-    setInputText(e.target.value)
-  }
+  const textHandler = (e) => {
+    setInputText(e.target.value);
+  };
 
   // add new note to the state array
   const saveHandler = () => {
@@ -23,28 +21,35 @@ const Notes = () => {
         id: uuid(),
         text: inputText,
       },
-    ])
+    ]);
     //clear textarea
-    setInputText('')
-  }
+    setInputText("");
+  };
 
   //delete note function
   const deleteNote = (id) => {
     const filteredNotes = notes.filter((note) => note.id !== id);
     setNotes(filteredNotes);
-  }
+  };
 
   return (
     <div className='notes'>
-      <Note/>
-      <Note/>
+      {notes.map((note) => (
+        <Note
+          key={note.id}
+          id={note.id}
+          text={note.text}
+          deleteNote={deleteNote}
+        />
+      ))}
+
       <CreateNote
-        textHandler = {textHandler}
-        saveHandler = {saveHandler}
-        inputText = {inputText}
+        textHandler={textHandler}
+        saveHandler={saveHandler}
+        inputText={inputText}
       />
     </div>
-  )
-}
+  );
+};
 
-export default Notes
+export default Notes;
