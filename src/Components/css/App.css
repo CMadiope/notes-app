@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&display=swap');
+
+body{
+  background-image: url("https://images.pexels.com/photos/1103970/pexels-photo-1103970.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+  background-repeat: no-repeat;
+  /* background-size: cover; */
+  font-family: 'Montserrat';
+}
+
+.main {
+  max-width: 960px;
+  margin: 0px auto;
+  padding: 0px 15px;
+  min-height: 100vh;
+}
