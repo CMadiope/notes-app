@@ -38,7 +38,11 @@ const Notes = () => {
     <div className='notes'>
       <Note/>
       <Note/>
-      <CreateNote/>
+      <CreateNote
+        textHandler = {textHandler}
+        saveHandler = {saveHandler}
+        inputText = {inputText}
+      />
     </div>
   )
 }
