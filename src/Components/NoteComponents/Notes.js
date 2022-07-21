@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Note from "./Note";
 import "../css/Note.css";
 import CreateNote from "./CreateNote";
@@ -31,6 +31,18 @@ const Notes = () => {
     const filteredNotes = notes.filter((note) => note.id !== id);
     setNotes(filteredNotes);
   };
+
+  //saving data to local storage
+  useEffect(() => {
+    localStorage.setItem('Notes', JSON.stringify(notes));
+  }, [notes])
+  //get the saved notes and add them to the array
+  useEffect(() => {
+    const data = JSON.parse(localStorage.getItem("Notes"));
+    if (data) {
+      setNotes(data)
+    }
+  })
 
   return (
     <div className='notes'>
